@@ -1,7 +1,8 @@
 .btn {
     background: linear-gradient(102deg, #075578 0%,#470a68 100%);
     border-color: #470a68;
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 20px;
     text-transform: uppercase;
     height: 100px;
     width: 300px;
@@ -11,13 +12,10 @@
     background: linear-gradient(102deg, #075578 0%,#470a68 100%);
     border-color: #470a68;
     font-weight: 600;
-    text-transform: uppercase;
-    height: 100px;
-    width: 300px;
 }
 
 .options {
-    row-gap: 15px;
+    row-gap: 40px;
     justify-content: space-between;
     padding: 35px;
 }
