@@ -3,10 +3,11 @@ import { CommonModule } from '@angular/common';
 
 import { BankingOptionsRoutingModule } from './banking-options-routing.module';
 import { BankingOptionsComponent } from './banking-options.component';
+import { WithdrawalComponent } from './components/withdrawal/withdrawal.component';
 
 
 @NgModule({
-  declarations: [BankingOptionsComponent],
+  declarations: [BankingOptionsComponent, WithdrawalComponent],
   imports: [
     CommonModule,
     BankingOptionsRoutingModule
