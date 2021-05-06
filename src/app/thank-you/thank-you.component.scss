@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 25%;
+    margin-top: 30px;
+    
+    .d-flex {
+        .box {
+            border: 2px solid;
+            height: 50px;
+
+            &.cash {
+                i.fa-money-bill {
+                    font-size: 340px;
+                    color: #d8efbe;
+                }
+            }
+
+            &.receipt {
+                i.fa-receipt {
+                    font-size: 340px;
+                    color: #fff5f5;
+                    margin-left: 80px;
+                    position: relative;
+                    top: 25px;
+                }
+            }
+        }
+        column-gap: 20px;
+    }
+}

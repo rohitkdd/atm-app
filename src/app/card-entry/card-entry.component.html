@@ -1,0 +1,9 @@
+<div class="container">
+    <h2>Please insert your card</h2>
+
+    <div class="card-box"></div>
+    <div [@cardEntry]="state" (@cardEntry.done)="onEnd($event)"><i class="far fa-credit-card fa-rotate-90"></i></div>
+
+    <button class="btn btn-primary" routerLink="/pin-entry">Insert Card</button>
+
+</div>

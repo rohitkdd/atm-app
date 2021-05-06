@@ -1,0 +1,14 @@
+<div class="container">
+    <h2>Thank you for banking with us!</h2>
+
+    <strong>Please collect your cash & receipt.</strong>
+    <div class="d-flex boxes mt-2">
+        <div class="col-5 box cash">
+            <div [@takeOut]="state" (@takeOut.done)="onEnd($event)"><i class="fas fa-money-bill"></i></div>
+        </div>
+        <div class="col-5 box receipt">
+            <div [@takeOut]="state" (@takeOut.done)="onEnd($event)"><i class="fas fa-receipt"></i></div>
+        </div>
+    </div>
+
+</div>

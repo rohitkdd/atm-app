@@ -1,0 +1,31 @@
+.container {
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+
+    .card-box {
+        border: 2px solid;
+        width: 210px;
+        height: 15px;
+        box-sizing: border-box;
+    }
+
+    i.fa-credit-card {
+        font-size: 200px;
+        color: gray;
+    }
+
+    .btn {
+        background: linear-gradient(102deg, #075578 0%,#470a68 100%);
+        border-color: #470a68;
+        font-weight: 600;
+        font-size: 24px;
+        text-transform: uppercase;
+        height: 100px;
+        width: 300px;
+        color: #fff;
+        margin-top: 50px;
+    }
+}

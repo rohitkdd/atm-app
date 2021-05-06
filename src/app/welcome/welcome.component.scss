@@ -1,0 +1,25 @@
+.container {
+
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+
+    .btn {
+        border: 1px solid transparent;
+        height: 50vh;
+        width: 50vh;
+        border-radius: 50%;
+        box-shadow: #a182b1 1px 0px 20px 10px;
+        background: linear-gradient(147deg, #075578 0%, #470a68 100%);
+        color: #fff;
+        font-weight: 700;
+        font-size: 40px;
+    }
+
+    .btn:hover {
+        box-shadow: #7c5a8e 1px 0px 20px 11px;
+    }
+
+}
