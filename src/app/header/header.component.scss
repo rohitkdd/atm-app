@@ -1,0 +1,21 @@
+.container-fluid {
+    .d-flex{
+        h1 {
+            color: #41126a;
+            font-weight: 700;
+        }
+        .col {
+            padding: 0;
+        }
+
+        strong {
+            align-self: center;
+            font-size: 24px;
+            text-align: right;
+
+            &.text-primary {
+                color: #4f1069!important;
+            }
+        }
+    }
+}

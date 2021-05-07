@@ -11,6 +11,7 @@ import { ThankYouComponent } from './thank-you/thank-you.component';
 import { NgIdleKeepaliveModule } from '@ng-idle/keepalive';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { HeaderComponent } from './header/header.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,8 @@ import { FormsModule } from '@angular/forms';
     WelcomeComponent,
     CardEntryComponent,
     PinEntryComponent,
-    ThankYouComponent
+    ThankYouComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
