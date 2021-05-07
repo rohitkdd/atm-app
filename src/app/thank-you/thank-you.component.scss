@@ -3,6 +3,24 @@
     flex-direction: column;
     height: 25%;
     margin-top: 30px;
+
+    h5 {
+        .amount {
+            color: green;
+            font-size: 22px;
+        }
+    }
+
+    i {
+        &.fa-receipt {
+            color: #fff5f5;
+        }
+        font-size: 340px;
+
+        &.fa-leaf {
+            color: #94e33b;
+        }
+    }
     
     .d-flex {
         .box {
@@ -18,8 +36,6 @@
 
             &.receipt {
                 i.fa-receipt {
-                    font-size: 340px;
-                    color: #fff5f5;
                     margin-left: 80px;
                     position: relative;
                     top: 25px;
@@ -27,5 +43,42 @@
             }
         }
         column-gap: 20px;
+    }
+
+    .balance-enquiry {
+
+        .receipt-option {
+
+            .btn {
+                font-weight: 500;
+                color: #fff;
+
+                &.go-green-btn {
+                    font-style: italic;
+                }
+            }
+        }
+    }
+
+    .user-receipt-opinion {
+
+        .go-green {
+
+            i.fa-leaf {
+                color: #84b749;
+                text-align: center;
+                margin-top: 50px;
+            }
+        }
+    }
+
+    .eject-card {
+
+        i.fa-credit-card {
+            color: #5c5b5b;
+            position: relative;
+            top: 35px;
+            right: 15px;
+        }
     }
 }

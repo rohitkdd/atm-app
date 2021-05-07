@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
+import { Router } from '@angular/router';
+import { SharedService } from '../shared.service';
 
 @Component({
   templateUrl: './card-entry.component.html',
@@ -15,9 +17,11 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
 })
 export class CardEntryComponent implements OnInit {
   state = 'out';
-  constructor() { }
+  constructor(private router: Router, private sharedService: SharedService) { }
 
   ngOnInit() {
+    localStorage.clear();
+    this.sharedService.setCardInserted(false);
   }
 
   ngAfterViewInit(): void {
@@ -31,6 +35,11 @@ export class CardEntryComponent implements OnInit {
     if (event.toState === 'out') {
       this.state = 'in';
     }
+  }
+
+  cardEntry() {
+    this.sharedService.setCardInserted(true);
+    this.router.navigate(['/pin-entry']);
   }
 
 }

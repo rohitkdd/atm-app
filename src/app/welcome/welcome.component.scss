@@ -6,6 +6,10 @@
     display: flex;
     flex-direction: column;
 
+    h1 {
+        font-size: 48px;
+    }
+
     .btn {
         border: 1px solid transparent;
         height: 50vh;

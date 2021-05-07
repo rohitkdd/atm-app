@@ -1,6 +1,5 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
-import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-banking-options',

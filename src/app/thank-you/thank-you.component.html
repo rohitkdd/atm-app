@@ -1,10 +1,9 @@
 <div class="container">
-    <h1>Thank you for banking with us!</h1>
+    <h1 class="font-weight-bold">Thank you for banking with us!</h1>
 
-    <div class="mt-3" *ngIf="cashDispensed">
-        <h5 class="font-weight-bold">Amount dispensed {{cashDispensed |
-            currency: 'AED' + ' ' :
-            'code':'.2-2'}}</h5>
+    <div class="mt-3 d-none d-lg-block" *ngIf="cashDispensed">
+        <h5 class="font-weight-bold">Amount dispensed <span class="amount">{{cashDispensed | currency: 'AED' + ' ' :
+                'code' : '.2-2'}}</span></h5>
         <h4 class="font-weight-bold">Please collect your cash & receipt.</h4>
         <div class="d-flex boxes mt-2">
             <div class="col-5 box cash">
@@ -12,6 +11,45 @@
             </div>
             <div class="col-5 box receipt">
                 <div [@takeOut]="state" (@takeOut.done)="onEnd($event)"><i class="fas fa-receipt"></i></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="balance-enquiry mt-2" *ngIf="isBalanceEnquiry && !isOptionChosen">
+        <div class="receipt-option">
+            <h4 class="font-weight-bold">Do you want a receipt for this transaction?</h4>
+
+            <div class="d-flex mt-2">
+                <button class="btn btn-lg" (click)="showReceiptOnly()">Yes</button>
+                <button class="btn btn-lg ml-2 go-green-btn" (click)="goGreen()">No, let's go green</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex mt-4 user-receipt-opinion" *ngIf="!isBalanceEnquiry && isOptionChosen && !isCardEjected">
+        <ng-container *ngIf="hasRequestedReceipt">
+            <h3 class="font-weight-bold">Please collect your receipt</h3>
+            <div class="col-5 box receipt">
+                <div [@takeOut]="state" (@takeOut.done)="onEnd($event)"><i class="fas fa-receipt"></i></div>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="isGoGreenSelected">
+            <div class="d-flex flex-column go-green">
+                <h3 class="font-weight-bold">Let's go green. Thanks for contributing to this society by saving paper.
+                </h3>
+                <div [@fade]="fadeState" (@fade.done)="onFadeEnd($event)"><i class="fas fa-leaf"></i></div>
+            </div>
+        </ng-container>
+
+    </div>
+
+    <div class="d-flex flex-column mt-4 eject-card" *ngIf="isCardEjected">
+        <h3 class="font-weight-bold">Please collect your card</h3>
+        <div class="d-flex">
+            <div class="col-5 box">
+                <div [@takeOut]="state" (@takeOut.done)="onEnd($event)"><i class="far fa-credit-card fa-rotate-90"></i>
+                </div>
             </div>
         </div>
     </div>

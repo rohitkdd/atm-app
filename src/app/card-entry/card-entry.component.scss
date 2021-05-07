@@ -5,6 +5,11 @@
     display: flex;
     flex-direction: column;
 
+    h2 {
+        font-weight: 600;
+        font-size: 36px;
+    }
+
     .card-box {
         border: 2px solid;
         width: 210px;

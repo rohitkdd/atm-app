@@ -1,5 +1,5 @@
 <div class="container">
-    <h2 class="font-weight-bold">Enter your PIN here</h2>
+    <h2>Enter your PIN here</h2>
 
     <form #f="ngForm" (ngSubmit)="f.form.valid && proceed()">
         <input type="password" name="pin" pattern=".{4,}" maxlength="4" (keypress)="numberOnly($event)"

@@ -4,6 +4,6 @@
     <div class="card-box"></div>
     <div [@cardEntry]="state" (@cardEntry.done)="onEnd($event)"><i class="far fa-credit-card fa-rotate-90"></i></div>
 
-    <button class="btn btn-primary" routerLink="/pin-entry">Insert Card</button>
+    <button class="btn btn-primary" (click)="cardEntry()">Insert Card</button>
 
 </div>

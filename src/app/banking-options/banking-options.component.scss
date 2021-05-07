@@ -3,6 +3,8 @@
     
     h2 {
         margin-top: 2%;
+        font-size: 30px;
+        font-weight: 600;
     }
     .btn {
         font-weight: 500;
@@ -17,9 +19,9 @@
     }
     
     .options {
-        row-gap: 40px;
         justify-content: space-between;
         padding: 35px;
-        height: 100%;
+        height: 80%;
+        row-gap: 25px;
     }
 }
