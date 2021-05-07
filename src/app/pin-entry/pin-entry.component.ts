@@ -10,6 +10,7 @@ import { Subscription } from 'rxjs';
 export class PinEntryComponent implements OnInit, OnDestroy {
   pin;
   cardInsertedSubscription: Subscription;
+  timer;
   constructor(private sharedService: SharedService, private router: Router) { }
 
   ngOnInit() {
@@ -19,6 +20,11 @@ export class PinEntryComponent implements OnInit, OnDestroy {
         this.router.navigate(['/']);
       }
     });
+
+    this.timer = setTimeout(() => {
+      this.sharedService.ejectCard();
+      this.router.navigate(['/thank-you']);
+    }, 10000);
   }
 
   proceed() {
@@ -40,6 +46,7 @@ export class PinEntryComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.cardInsertedSubscription.unsubscribe();
+    clearTimeout(this.timer);
   }
 
 }
