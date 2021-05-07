@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
+import { Router } from '@angular/router';
 
 @Component({
   templateUrl: './thank-you.component.html',
@@ -14,7 +15,7 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
 export class ThankYouComponent implements OnInit, OnDestroy {
   state = 'in';
   cashDispensed: number;
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
     this.cashDispensed = parseInt(localStorage.getItem('cashDispensed'), 10);
@@ -24,6 +25,10 @@ export class ThankYouComponent implements OnInit, OnDestroy {
     setTimeout(() => {
       this.state = 'out';
     }, 0);
+
+    setTimeout(() => {
+      this.router.navigate(['/']);
+    }, 7000);
   }
 
   onEnd(event) {
