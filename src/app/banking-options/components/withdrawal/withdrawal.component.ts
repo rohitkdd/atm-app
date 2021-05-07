@@ -16,8 +16,11 @@ export class WithdrawalComponent implements OnInit {
   }
 
   dispenseCash(amount) {
-    alert('Dispensed amount is ' + amount);
+    localStorage.setItem('cashDispensed', amount);
     this.router.navigate(['/thank-you']);
   }
 
+  ngOnDestroy(): void {
+    localStorage.removeItem('pin');
+  }
 }

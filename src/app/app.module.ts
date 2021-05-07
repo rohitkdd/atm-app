@@ -8,7 +8,9 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { CardEntryComponent } from './card-entry/card-entry.component';
 import { PinEntryComponent } from './pin-entry/pin-entry.component';
 import { ThankYouComponent } from './thank-you/thank-you.component';
-
+import { NgIdleKeepaliveModule } from '@ng-idle/keepalive';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +23,10 @@ import { ThankYouComponent } from './thank-you/thank-you.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgIdleKeepaliveModule.forRoot(),
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

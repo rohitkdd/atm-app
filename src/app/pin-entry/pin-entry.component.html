@@ -1,7 +1,15 @@
 <div class="container">
     <h2 class="font-weight-bold">Enter your PIN here</h2>
-    <input type="password" maxlength="4">
-    <button class="btn btn-primary mt-4" routerLink="/auth">Proceed</button>
 
+    <form #f="ngForm" (ngSubmit)="f.form.valid && proceed()">
+        <input type="password" name="pin" pattern=".{4,}" maxlength="4" (keypress)="numberOnly($event)"
+            [(ngModel)]="pin" #pinInput="ngModel" autofocus required>
+        <div *ngIf="f.submitted && pinInput.invalid">
+            <div class="error" *ngIf="pinInput.errors.required"> Please enter your PIN to proceed</div>
+            <div class="error" *ngIf="!pinInput.errors.required && pinInput.errors.pattern"> Please enter 4 digits
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary mt-4">Proceed</button>
+    </form>
 
 </div>

@@ -1,15 +1,18 @@
-.btn {
-    background: linear-gradient(102deg, #075578 0%,#470a68 100%);
-    border-color: #470a68;
-    font-weight: 600;
-    font-size: 24px;
-    text-transform: uppercase;
-    height: 200px;
-    width: 300px;
-}
 
-.denomination {
-    height: 100vh;
-    justify-content: space-between;
-    align-items: center;
+.container {
+    h2 {
+        margin-top: 5%;
+    }
+    .denomination {
+        height: 85vh;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .btn {
+        font-weight: 600;
+        font-size: 24px;
+        text-transform: uppercase;
+        height: 200px;
+        width: 300px;
+    }
 }

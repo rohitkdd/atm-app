@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 
 @Component({
@@ -6,16 +6,18 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
   styleUrls: ['./thank-you.component.scss'],
   animations: [
     trigger('takeOut', [
-      state('in', style({opacity: 0.2, transform: 'translateY(-5%)'})),
+      state('in', style({opacity: 0.3, transform: 'translateY(-5%)'})),
       transition('in => out', animate('3s linear')),
     ])
   ]
 })
-export class ThankYouComponent implements OnInit {
+export class ThankYouComponent implements OnInit, OnDestroy {
   state = 'in';
+  cashDispensed: number;
   constructor() { }
 
   ngOnInit() {
+    this.cashDispensed = parseInt(localStorage.getItem('cashDispensed'), 10);
   }
 
   ngAfterViewInit(): void {
@@ -25,12 +27,14 @@ export class ThankYouComponent implements OnInit {
   }
 
   onEnd(event) {
-    this.state = 'in';
-    if (event.toState === 'in') {
-      setTimeout(() => {
-        this.state = 'out';
-      }, 0);
+    this.state = 'out';
+    if (event.toState === 'out') {
+      this.state = 'in';
     }
+  }
+
+  ngOnDestroy(): void {
+    localStorage.clear();
   }
 
 }

@@ -1,1 +1,27 @@
 <router-outlet></router-outlet>
+
+<button type="button" class="d-none" data-toggle="modal" data-target="#timeoutModal" #timeoutModalBtn></button>
+
+<!-- Session Idle & Timeout Modal - start -->
+<div class="modal fade" id="timeoutModal" tabindex="-1" role="dialog" aria-labelledby="timeoutModalLabel"
+    aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="timeoutModalLabel">Are you here?</h3>
+            </div>
+            <div class="modal-body">
+                It's been a while since you were active.
+                <br /> Your session will timeout in a few seconds, if you do not choose to stay.
+                <br /> {{idleState}}.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn-danger btn-lg text-uppercase font-weight-bold" data-dismiss="modal"
+                    (click)="logout()">Leave</button>
+                <button type="button" class="btn-success btn-lg text-uppercase font-weight-bold" data-dismiss="modal"
+                    (click)="stay()">Stay</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Session Idle & Timeout Modal - end -->

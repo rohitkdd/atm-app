@@ -29,9 +29,7 @@ export class CardEntryComponent implements OnInit {
   onEnd(event) {
     this.state = 'out';
     if (event.toState === 'out') {
-      setTimeout(() => {
-        this.state = 'in';
-      }, 0);
+      this.state = 'in';
     }
   }
 

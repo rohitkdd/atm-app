@@ -1,21 +1,25 @@
-.btn {
-    background: linear-gradient(102deg, #075578 0%,#470a68 100%);
-    border-color: #470a68;
-    font-weight: 500;
-    font-size: 20px;
-    text-transform: uppercase;
-    height: 100px;
-    width: 300px;
-}
 
-.btn:hover {
-    background: linear-gradient(102deg, #075578 0%,#470a68 100%);
-    border-color: #470a68;
-    font-weight: 600;
-}
-
-.options {
-    row-gap: 40px;
-    justify-content: space-between;
-    padding: 35px;
+.container-fluid {
+    
+    h2 {
+        margin-top: 2%;
+    }
+    .btn {
+        font-weight: 500;
+        font-size: 20px;
+        text-transform: uppercase;
+        height: 100px;
+        width: 300px;
+    }
+    
+    .btn:hover {
+        font-weight: 600;
+    }
+    
+    .options {
+        row-gap: 40px;
+        justify-content: space-between;
+        padding: 35px;
+        height: 100%;
+    }
 }

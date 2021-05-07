@@ -1,4 +1,5 @@
 <div class="container">
+    <h2>Choose the amount you want to withdraw</h2>
     <div class="d-flex flex-wrap denomination">
         <button class="btn btn-primary" *ngFor="let denomination of denominations"
             (click)="dispenseCash(denomination)">{{denomination}}</button>

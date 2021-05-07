@@ -5,6 +5,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { CardEntryComponent } from './card-entry/card-entry.component';
 import { PinEntryComponent } from './pin-entry/pin-entry.component';
 import { ThankYouComponent } from './thank-you/thank-you.component';
+import { AuthGuard } from './auth.guard';
 
 
 const routes: Routes = [
@@ -12,7 +13,8 @@ const routes: Routes = [
     path: 'auth', component: AuthLayoutComponent, children: [
       { path: '', redirectTo: 'banking-options' , pathMatch: 'full'},
       { path: 'banking-options', loadChildren: () => import('./banking-options/banking-options.module').then(m => m.BankingOptionsModule) },
-    ]
+    ],
+    canActivate: [AuthGuard]
   },
   {
     path: 'welcome', component: WelcomeComponent
@@ -27,9 +29,9 @@ const routes: Routes = [
     path: 'thank-you', component: ThankYouComponent
   },
   {
-    path: '',
-    redirectTo: 'welcome',
-    pathMatch: 'full'
+    path: '**',
+    pathMatch: 'full',
+    redirectTo: 'welcome'
   }
 ];
 
