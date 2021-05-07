@@ -29,7 +29,6 @@
 
             &.cash {
                 i.fa-money-bill {
-                    font-size: 340px;
                     color: #d8efbe;
                 }
             }
@@ -80,5 +79,155 @@
             top: 35px;
             right: 15px;
         }
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 519px) {
+    .go-green {
+        i.fa-leaf {
+            font-size: 120px;
+        }
+    }
+
+    .box {
+
+        i.fa-credit-card {
+            font-size: 150px;
+        }
+    }
+}
+@media screen and (min-width: 520px) and (max-width: 720px) {
+    .go-green {
+        i.fa-leaf {
+            font-size: 140px;
+        }
+    }
+
+    .box {
+
+        i.fa-credit-card {
+            font-size: 170px;
+        }
+    }
+}
+@media screen and (min-width: 721px) and (max-width: 991px) {
+    .go-green {
+        i.fa-leaf {
+            font-size: 160px;
+        }
+    }
+
+    .box {
+
+        i.fa-credit-card {
+            font-size: 190px;
+        }
+    }
+}
+
+@media screen and (min-width: 520px) {
+    div {
+        &.receipt {
+            i.fa-receipt {
+                font-size: 120px !important;
+                margin-left: 40px !important;
+            }
+        }
+        &.cash {
+            i.fa-money-bill {
+                font-size: 140px !important;
+            }
+        } 
+    }
+}
+
+@media screen and (min-width: 720px) {
+    div {
+        &.receipt {
+            i.fa-receipt {
+                font-size: 140px !important;
+                margin-left: 65px !important;
+            }
+        }
+        &.cash {
+            i.fa-money-bill {
+                font-size: 150px !important;
+            }
+        } 
+    }
+}
+@media screen and (min-width: 820px) {
+    div {
+        &.receipt {
+            i.fa-receipt {
+                font-size: 140px !important;
+                margin-left: 55px !important;
+            }
+        }
+        &.cash {
+            i.fa-money-bill {
+                font-size: 180px !important;
+            }
+        } 
+    }
+}
+@media screen and (min-width: 920px) {
+    div {
+        &.receipt {        
+            i.fa-receipt {
+                font-size: 205px !important;
+                margin-left: 80px !important;
+            }
+        }
+        &.cash {
+            i.fa-money-bill {
+                font-size: 200px !important;
+            }
+        } 
+    }
+}
+@media screen and (min-width: 980px) {
+    div {
+        &.receipt {        
+            i.fa-receipt {
+                font-size: 220px !important;
+                margin-left: 65px !important;
+            }
+        }
+        &.cash {
+            i.fa-money-bill {
+                font-size: 205px !important;
+            }
+        } 
+    }
+}
+@media screen and (min-width: 1080px) {
+    div {
+        &.receipt {    
+            i.fa-receipt {
+                font-size: 320px !important;
+                margin-left: 80px !important;
+            }
+        }
+        &.cash {
+            i.fa-money-bill {
+                font-size: 280px !important;
+            }
+        } 
+    }
+}
+@media screen and (min-width: 1320px) {
+    div {
+        &.receipt {
+            i.fa-receipt {
+                font-size: 340px !important;
+                margin-left: 80px !important;
+            }
+        }
+        &.cash {
+            i.fa-money-bill {
+                font-size: 340px !important;
+            }
+        } 
     }
 }

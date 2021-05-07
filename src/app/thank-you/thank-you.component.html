@@ -6,10 +6,10 @@
                 'code' : '.2-2'}}</span></h5>
         <h4 class="font-weight-bold">Please collect your cash & receipt.</h4>
         <div class="d-flex boxes mt-2">
-            <div class="col-5 box cash">
+            <div class="col-5 box cash d-none d-sm-block">
                 <div [@takeOut]="state" (@takeOut.done)="onEnd($event)"><i class="fas fa-money-bill"></i></div>
             </div>
-            <div class="col-5 box receipt">
+            <div class="col-5 box receipt d-none d-sm-block">
                 <div [@takeOut]="state" (@takeOut.done)="onEnd($event)"><i class="fas fa-receipt"></i></div>
             </div>
         </div>
@@ -29,7 +29,7 @@
     <div class="d-flex mt-4 user-receipt-opinion" *ngIf="!isBalanceEnquiry && isOptionChosen && !isCardEjected">
         <ng-container *ngIf="hasRequestedReceipt">
             <h3 class="font-weight-bold">Please collect your receipt</h3>
-            <div class="col-5 box receipt">
+            <div class="col-5 box receipt  d-none d-sm-block">
                 <div [@takeOut]="state" (@takeOut.done)="onEnd($event)"><i class="fas fa-receipt"></i></div>
             </div>
         </ng-container>
@@ -38,7 +38,8 @@
             <div class="d-flex flex-column go-green">
                 <h3 class="font-weight-bold">Let's go green. Thanks for contributing to this society by saving paper.
                 </h3>
-                <div [@fade]="fadeState" (@fade.done)="onFadeEnd($event)"><i class="fas fa-leaf"></i></div>
+                <div class="d-none d-sm-block" [@fade]="fadeState" (@fade.done)="onFadeEnd($event)"><i
+                        class="fas fa-leaf"></i></div>
             </div>
         </ng-container>
 
@@ -47,7 +48,7 @@
     <div class="d-flex flex-column mt-4 eject-card" *ngIf="isCardEjected">
         <h3 class="font-weight-bold">Please collect your card</h3>
         <div class="d-flex">
-            <div class="col-5 box">
+            <div class="col-5 box d-none d-sm-block">
                 <div [@takeOut]="state" (@takeOut.done)="onEnd($event)"><i class="far fa-credit-card fa-rotate-90"></i>
                 </div>
             </div>

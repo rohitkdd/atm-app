@@ -76,7 +76,7 @@ export class ThankYouComponent implements OnInit, OnDestroy {
     this.isBalanceEnquiry = false;
     this.isOptionChosen = true;
     this.hasRequestedReceipt = true;
-    
+    clearTimeout(this.timer);
     this.timer = setTimeout(() => {
       this.showEjectedCard();
     }, 7000);
@@ -86,7 +86,7 @@ export class ThankYouComponent implements OnInit, OnDestroy {
     this.isBalanceEnquiry = false;
     this.isGoGreenSelected = true;
     this.isOptionChosen = true;
-    
+    clearTimeout(this.timer);
     this.timer = setTimeout(() => {
       this.showEjectedCard();
     }, 7000);

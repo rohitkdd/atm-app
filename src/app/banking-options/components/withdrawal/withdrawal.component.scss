@@ -18,3 +18,9 @@
         width: 300px;
     }
 }
+
+@media screen and (max-width: 920px) {
+    .denomination {
+        row-gap: 20px;
+    }
+}
